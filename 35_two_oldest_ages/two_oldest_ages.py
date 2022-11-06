@@ -22,14 +22,14 @@ def two_oldest_ages(ages):
     # you may find it helpful to research the `sorted(iter)` function, which
     # can take *any* type of list-like-thing, and returns a new, sorted list
     # from it.
-    ages.sort(reverse=True)
     
-    if(ages[1] != ages[0]):
-        x = tuple([ages[1],ages[0]])
+    res = set(ages)
+    result = list(res)
+    result.sort(reverse=True)
+    
+    if len(result) >= 2:
+        return tuple([result[1],result[0]])
     else:
-        x = tuple([ages[2],ages[1]])
-
-
-    return x
+        return "input list with more elements"
 
 
