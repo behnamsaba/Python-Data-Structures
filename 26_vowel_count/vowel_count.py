@@ -7,3 +7,14 @@ def vowel_count(phrase):
         >>> vowel_count('HOW ARE YOU? i am great!') 
         {'o': 2, 'a': 3, 'e': 2, 'u': 1, 'i': 1}
     """
+    voewel ="aeiou"
+    my_dic = {}
+    phrase2 = phrase.lower()
+    for char in phrase2:
+        if char in voewel:
+            my_dic[char] = phrase2.count(char)
+    
+    return my_dic
+
+
+

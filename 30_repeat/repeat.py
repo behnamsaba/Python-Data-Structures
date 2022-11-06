@@ -18,3 +18,14 @@ def repeat(phrase, num):
         >>> repeat('abc', 'nope') is None
         True
     """
+    sum = ""
+    
+    if type(num) == int and num >= 0:
+        for i in range(num):
+            sum += phrase
+        return sum
+    else:
+        return True
+    
+
+

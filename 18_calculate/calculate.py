@@ -26,3 +26,16 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
         >>> calculate('foo', 2, 3)
         
     """
+    if(operation == "add"):
+        return (f"{message} {a + b}")
+    elif(operation == "subtract") and make_int == True:
+        return(f"{message} {int(a-b)}")
+    elif(operation == "divide"):
+        return(f"{message} {a/b}")
+
+
+print(calculate('add', 2.5, 4))
+print(calculate('subtract', 4, 1.5, make_int=True))
+print(calculate('divide', 10, 4, message='I got'))
+print(calculate('foo', 2, 3))
+
